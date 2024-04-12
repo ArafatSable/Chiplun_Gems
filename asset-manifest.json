@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ArafatSable/Chiplun_Gems.git/static/css/main.c54844ab.css",
+    "main.js": "/ArafatSable/Chiplun_Gems.git/static/js/main.3ad423ef.js",
+    "static/js/787.28cb0dcd.chunk.js": "/ArafatSable/Chiplun_Gems.git/static/js/787.28cb0dcd.chunk.js",
+    "static/media/fa-solid-900.ttf": "/ArafatSable/Chiplun_Gems.git/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/deve.png": "/ArafatSable/Chiplun_Gems.git/static/media/deve.e60a99ec5958086c44fe.png",
+    "static/media/fa-brands-400.ttf": "/ArafatSable/Chiplun_Gems.git/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/fa-solid-900.woff2": "/ArafatSable/Chiplun_Gems.git/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/fa-brands-400.woff2": "/ArafatSable/Chiplun_Gems.git/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/banner.JPG": "/ArafatSable/Chiplun_Gems.git/static/media/banner.e782d59d73256e9ac540.JPG",
+    "static/media/fa-regular-400.ttf": "/ArafatSable/Chiplun_Gems.git/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/logo-color.png": "/ArafatSable/Chiplun_Gems.git/static/media/logo-color.82579d2488f1979b82d7.png",
+    "static/media/fa-regular-400.woff2": "/ArafatSable/Chiplun_Gems.git/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/ArafatSable/Chiplun_Gems.git/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/ArafatSable/Chiplun_Gems.git/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/ArafatSable/Chiplun_Gems.git/index.html",
+    "main.c54844ab.css.map": "/ArafatSable/Chiplun_Gems.git/static/css/main.c54844ab.css.map",
+    "main.3ad423ef.js.map": "/ArafatSable/Chiplun_Gems.git/static/js/main.3ad423ef.js.map",
+    "787.28cb0dcd.chunk.js.map": "/ArafatSable/Chiplun_Gems.git/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c54844ab.css",
+    "static/js/main.3ad423ef.js"
+  ]
+}
