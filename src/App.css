@@ -1,38 +1,388 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
+
+
+body {
+	background-attachment: fixed;	
+	background-size: cover;
+  
+	}
+
+#container{
+	box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 2em auto;
+	height: 350px;
+	width: 700px;
+  
+	
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.product-details {
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	padding: 30px;
+	height: 100%;
+	float: left;
+	width: 40%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#container .product-details h1{
+	font-family: 'Bebas Neue', cursive;
+	display: inline-block;
+	position: relative;
+	font-size: 30px;
+	color: #344055;
+	margin: 0;
+	
+}
+
+#container .product-details h1:before{
+	position: absolute;
+	content: '';
+	right: 0%; 
+	top: 0%;
+	transform: translate(25px, -15px);
+	font-family: 'Bree Serif', serif;
+	display: inline-block;
+	background: #ffe6e6;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 5px;
+	color: white;
+	margin: 0;
+	animation: chan-sh 6s ease infinite;
+
+}
+
+
+
+	
+
+
+.hint-star {
+	display: inline-block;
+	margin-left: 0.5em;
+	color: gold;
+	width: 50%;
+}
+
+
+#container .product-details > p {
+font-family: 'EB Garamond', serif;
+	text-align: left;
+	font-size: 18px;
+	color: #7d7d7d;
+	
+}
+.control{
+	position: absolute;
+	bottom: 20%;
+	left: 22.8%;
+	
+}
+.btn {
+
+	transform: translateY(0px);
+	transition: 0.3s linear;
+	background:  #809fff;
+	border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #eee;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.btn:hover{transform: translateY(-6px);
+	background: #1a66ff;}
+
+.btn span {
+	font-family: 'Farsan', cursive;
+	transition: transform 0.3s;
+	display: inline-block;
+  padding: 10px 20px;
+	font-size: 1.2em;
+	margin:0;
+	
+}
+.btn .price, .shopping-cart{
+	background: #333;
+	border: 0;
+	margin: 0;
+}
+
+.btn .price {
+	transform: translateX(-10%); padding-right: 15px;
+}
+
+.btn .shopping-cart {
+	transform: translateX(-100%);
+  position: absolute;
+	background: #333;
+	z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.btn .buy {z-index: 3; font-weight: bolder;}
+
+.btn:hover .price {transform: translateX(-110%);}
+
+.btn:hover .shopping-cart {transform: translateX(0%);}
+
+
+
+.product-image {
+	transition: all 0.3s ease-out;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: right;
+	width: 45%;
+	display: inline-block;
+}
+
+#container img {width: 100%;height: 100%;}
+
+.info {
+    background: rgba(27, 26, 26, 0.9);
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 105%;
+    cursor: no-drop;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.info h2 {text-align: center}
+.product-image:hover .info{transform: translateX(0);}
+
+.info ul li{transition: 0.3s ease;}
+.info ul li:hover{transform: translateX(50px) scale(1.3);}
+
+.product-image:hover img {transition: all 0.3s ease-out;}
+.product-image:hover img {transform: scale(1.2, 1.2);}
+
+:root {
+    --primary-color: #1C3879;
+    --secondary-color: #607EAA;
+    --tertiary-color: #f9edcf;
+    --background-color: #F9F5EB;
+    --font-family: 'Roboto', sans-serif;
+}
+  .scroll-line {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    height: 5px;
+    background-color:#1C3879; /* Replace with your desired color */
+    transition: width 0.3s ease; /* Smooth transition effect */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .div-content {
+    flex: 1;
   }
-}
+  
+  .footer-container {
+    margin-top: auto;
+  }
+  
+
+  /* start of tour css */
+  .tour-detail,.restuarant-detail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2.4px solid #ccc;
+    border-radius: 15px;
+    font-family: var(--font-family);
+  }
+  
+  .text-section {
+    flex: 0 0 70%;
+    padding-right: 20px;
+   
+  }
+  
+  .text-section > div {
+    margin-bottom: 20px;
+  }
+  .tour-heading{
+    display: flex;
+    justify-content: center;
+  }
+  .tour-heading > h1{
+    color: var(--primary-color);
+    font-weight: 900;
+    font-family: var(--font-family);
+    text-transform:capitalize;
+    font-size: 50px;
+    text-align: center;
+    
+  }
+  .description-heading {
+    position: relative;
+  }
+  
+  .description-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  .description-heading:hover::after {
+    transform: scaleX(1);
+  }
+  .tour-heading-text {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    position: relative;
+  }
+  
+  .tour-heading-text::after,
+  .description-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tour-heading-text:hover::after,
+  .description-heading:hover::after {
+    transform: scaleX(1);
+  }
+  
+  
+  .text-section h1 {
+    color: #1C3879;
+    font-family:var(--font-family) ;
+    font-weight: 800;
+    font-size: 4rem ;
+    margin-bottom: 10px;
+  }
+  
+  .text-section p {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .image-section {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .desc{
+    display: flex;
+    justify-content: center;
+  }
+  .description-section {
+    width: 70%;
+    justify-content: center;
+  text-align: left;
+  margin-top: 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+ 
+ 
+  .description-section h1{
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 900;
+    font-family: var(--font-family);
+  }
+  
+  .description-section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* end of tour css */
+  
+  
+  @media only screen and (max-width: 480px) {
+    #container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .product-details,
+    .product-image {
+      width: 80%;
+      float: none;
+    }
+  
+    .info {
+      position: static;
+      transform: translateX(0%);
+      background: none;
+      color: #333;
+      height: auto;
+    }
+    
+    .tour-heading > h1 {
+      font-size: 30px;
+    }
+  
+    .text-section h1 {
+      font-size: 2rem;
+    }
+  
+    .description-section {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

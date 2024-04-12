@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+  --primary-color: #1C3879;
+  --secondary-color: #607EAA;
+  --tertiary-color: #f9edcf;
+  --background-color: #F9F5EB;
+  --font-family: 'Roboto', sans-serif;
+}
+div{
+  align-items: center;
+}
+div>.imgs{
+ 
+  padding-right: 3px;
+  height: 2rem;
+}
+
+.back-nav {
+  overflow: hidden;
+    background-color: #f9edcf;
+    opacity: 0;
+    transition: opacity 1.7s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: end;
+  }
+  
+  .back-nav.visible {
+    opacity: 1;
+  }
+  
+  
+.navbar-logo{
+    width: 38px;
+    zoom:170%;
+    height: 38px;
+}
+.navbar-buttons {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.navbar-buttons .nav-leftSide {
+    display: flex;
+    padding :  1%!important;
+    text-align: right;
+    cursor: pointer;
+}
+.navbar-button {
+  cursor: pointer;
+  position: relative;
+  color: #607EAA !important;
+  
+  font-size: 22px !important;
+  margin-right: 10px !important;
+  overflow: hidden;
+}
+.navbar-button:hover {
+    font-weight: bold;
+  }
+  
+.navbar-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #607EAA;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s ease-in-out;
+}
+
+.navbar-button:hover::before {
+  transform: scaleX(1);
+}
+
+.navbar-brand-text {
+  font-size: 25px; /* Adjust the font size to your preference */
+}
+
+@media (max-width: 576px) {
+  .navbar-brand-text {
+    font-size: 20px; /* Adjust the font size for mobile devices */
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: start;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    font-size: 20px; /* Adjust the font size for mobile devices */
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: start;
+  }
+  
+}

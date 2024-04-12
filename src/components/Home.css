@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --primary-color: #1C3879;
+    --secondary-color: #607EAA;
+    --tertiary-color: #f9edcf;
+    --background-color: #F9F5EB;
+    --font-family: 'Roboto', sans-serif;
+}
+.show-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.line-effect {
+    position: fixed;
+    top: 88px; /* Adjust this value based on your layout */
+    left: 0;
+    height: 3px;
+    background-color: var(--primary-color); /* Change this to the desired color */
+    z-index: 999;
+    transition: width 0.8s ease;
+  }
+  
+  .line-effect.show {
+    width: 100%;
+  }
+
+.text-center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    font-weight: 1000;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.para-text {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.animated-heading {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    /* Cursor styling */
+    animation: typing 5s infinite, blink-caret 5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    background-color: white;
+    animation: blink 3s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: white;
+    }
+}
+
+.content-tour {
+    background-color: var(--tertiary-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.content-tour.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-tour h1 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem 5rem 1rem;
+    text-decoration: none; /* Remove underline by default */
+    position: relative;
+}
+
+.content-tour h1:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease-in-out;
+}
+
+.content-tour h1:hover:before {
+    transform: scaleX(1);
+}
+
+
+.content-hospital {
+    background-color: var(--tertiary-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.content-hospital.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-hospital h1 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem 5rem 1rem;
+    text-decoration: none; /* Remove underline by default */
+    position: relative;
+}
+
+.content-hospital h1:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease-in-out;
+}
+
+.content-hospital h1:hover:before {
+    transform: scaleX(1);
+}
+
+
+.content-tourist,.content-hospitals {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem;
+}
+
+
+.content-hotels {
+    background-color: var(--background-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.content-hotels.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+.content-hotels h1 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem 5rem 1rem;
+    text-decoration: none; /* Remove underline by default */
+    position: relative;
+}
+
+.content-hotels h1:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease-in-out;
+}
+
+.content-hotels h1:hover:before {
+    transform: scaleX(1);
+}
+
+.card-image-container {
+    z-index: 1;
+ /* Adjust the desired width */
+    height: 120px; /* Adjust the desired height */
+
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+
+.rest-image {
+    width: 40%;
+}
+
+.rest-cards {
+    width: 60%;
+    display: flex;
+  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.rest-cards .read-more {
+    margin: 2rem 0rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.cards-own {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 10px 20px 5px;
+    transition: box-shadow 0.1s ease;
+    border: none; /* Remove default border */
+    position: relative;
+}
+
+.cards-own:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: 1;
+    transition: width 0.8s ease;
+    border-radius: 5px;
+}
+
+.cards-own:hover:before {
+    width: 100%;
+    border-image: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+    border-image-slice: 1;
+    background-position: left;
+    border: 2px solid var(--primary-color);
+}
+
+
+.card-content {
+    z-index: 1;
+    flex-basis: 60%;
+}
+
+.cards-own h2 {
+
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin: 0;
+    background-color: inherit;
+    color: #1C3879;
+    font-weight: bold;
+}
+
+.card-details {
+    display: flex;
+    align-items: flex-start;
+}
+
+.card-details p {
+    font-size: 0.9rem;
+    margin-right: 5px;
+    
+}
+.dog-card-button{
+    border: 0;
+    background-color: inherit;
+}
+.dog-card-button:hover{
+  
+    text-decoration: underline;
+}
+.specialties,
+.contact,
+.rating-label {
+  color: #1c3879;
+  font-weight: 800;
+}
+
+.rating {
+  color: #000;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+}
+
+.card-rating span {
+    margin-right: 5px;
+    
+}
+span.rating-label,span.rating{
+    font-size: 0.9rem;
+}
+
+
+
+
+.rest-cards .read-more a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+}
+
+.rest-cards .read-more a:hover {
+    color: #25499c;
+    text-decoration: underline;
+}
+@media (max-width: 576px) {
+
+    .text-center {
+        font-size: 1rem;
+        font-weight: 1000;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+}
+/* CSS code for mobile screens */
+@media (max-width: 767px) {
+    .text-center {
+      font-size: 2rem;
+    }
+  
+    .para-text {
+      font-size: 18px;
+    }
+  
+    .animated-heading {
+      font-size: 1rem;
+    }
+    .content-hotels h1{
+        font-size: 1.8rem;
+    }
+    .content-tour,.content-hospital h1{
+        font-size: 1.8rem;
+    }
+  
+    /* Adjust other styles as needed for mobile screens */
+  }
+  
+  /* CSS code for tablet screens */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .text-center {
+      font-size: 3rem;
+    }
+  
+    .para-text {
+      font-size: 20px;
+    }
+  
+    .animated-heading {
+      font-size: 2.5rem;
+    }
+    .content-hotels h1{
+        font-size: 1.8rem;
+    }
+    .content-tour,.content-hospital h1{
+        font-size: 1.8rem;
+    }
+  
+    /* Adjust other styles as needed for tablet screens */
+  }
+  
+  /* CSS code for larger screens */
+  @media (min-width: 992px) {
+    .text-center {
+      font-size: 4rem;
+    }
+  
+    .para-text {
+      font-size: 25px;
+    }
+  
+    .animated-heading {
+      font-size: 3em;
+    }
+  
+    /* Adjust other styles as needed for larger screens */
+  }
+  
+  /* Styles for mobile devices */
+@media screen and (max-width: 480px) {
+    .contact_form form {
+    width:350px;
+    }
+    .card-image-container{
+        height: 12rem;
+        width: 11rem;
+    }
+    .rest-cards{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-tour h1 {
+        font-size: 1.4rem;
+    }
+    .cards-own{
+        height: auto;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    .cards-own h2 {
+        font-size: 1rem;
+    }
+    .content-tour {
+      font-size: smaller;
+    }
+    .card-details{
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+    }
+  }
+  
+  /* Styles for tablets and small desktops */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .card-image-container{
+        height: 12rem;
+        width: 11rem;
+    }
+    .rest-cards{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-tour h1 {
+        font-size: 1.4rem;
+    }
+    .cards-own{
+        height: auto;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    .cards-own h2 {
+        font-size: 1rem;
+    }
+    .content-tour {
+      font-size: smaller;
+    }
+    .card-details{
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+    }
+  }
+  

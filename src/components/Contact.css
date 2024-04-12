@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --primary-color: #1C3879;
+    --secondary-color: #607EAA;
+    --tertiary-color: #f9edcf;
+    --background-color: #F9F5EB;
+    --font-family: 'Roboto', sans-serif;
+}
+.cards_call {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 4.5rem 0 2rem 0;
+  padding: 1px;
+}
+
+.cards_call i {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: #e91e1e; /* red color for phone icon */
+}
+
+.cards_call .zmdi-email {
+  color: #2196f3; /* blue color for email icon */
+}
+
+.cards_call .zmdi-home {
+  color: #4caf50; /* green color for address icon */
+}
+
+.display_card {
+  padding-left: 12rem;
+}
+
+.contact_info {
+  animation: slide-up 0.5s ease-out;
+}
+
+.contact_info_title {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.contact_form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.contact_form form {
+ width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: slide-up 0.5s ease-out;
+}
+.contact_error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  font-size: 2rem;
+  color: var(--primary-color);  
+}
+
+.contact_form label {
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 480px) {
+  .contact_form form {
+  width:350px;
+  }
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact_form textarea {
+  resize: none;
+}
+
+.contact_form button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color:var(--tertiary-color);
+  color:var(--primary-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  margin-top: 1rem;
+
+}
+.form-group .form-control{
+  margin: 0;
+
+}
+
+.contact_form button[type="submit"]:hover {
+  background-color:#1C3879;
+  color: white;
+    border-radius: 10px;
+    transition: 0.4566s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
